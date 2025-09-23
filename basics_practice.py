@@ -18,3 +18,15 @@ def find_max(numbers):
     return max_num
 
 print(find_max([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]))
+
+# 寫一個程式，從1印到100。
+# 如果數字是3的倍數，印"Fizz"；如果是5的倍數，印"Buzz"；如果同時是3和5的倍數，印"FizzBuzz"
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
