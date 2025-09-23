@@ -8,14 +8,14 @@ students = [{"id":1, "name":"Alice", "major":"computer science"},
             {"id":3, "name":"Charlie", "major":"physics"}]
 
 # 寫一個函式，接收一個數字列表，回傳該數字列表的最大值
-def find_max(numbers):
-    if not numbers:
+def find_max(numbers: list) -> int | None:
+    """
+    傳回數字列表中的最大值，若列表為空則回傳 None。
+    """
+    try:
+        return max(numbers)
+    except ValueError:
         return None
-    max_num = numbers[0]
-    for num in numbers:
-        if num > max_num:
-            max_num = num
-    return max_num
 
 print(find_max([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]))
 
